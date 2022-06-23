@@ -1,7 +1,54 @@
 <!DOCTYPE html>
 <html>
+
+<style>
+
+
+/* The Modal (background) */
+.modal {
+  display: none;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+}
+
+</style>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<p>Test webpage hosted with GitHub Pages.</p>
+
+<h2>Time Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Open Form</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content" action="javascript:void(0);">
+    <div>
+      
+	  </br>
+	  </br>
+      <label><b>Time Label: </b></label>
+      <input type="text" id="result" size="10">
+	  </br>
+	  </br>
+
+      <div>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" >Close Form</button>
+        <button type="button" onclick="Fill_in_Time()">Fill in Current Time</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+  function Fill_in_Time(){
+	var datetime = new Date().toLocaleTimeString();
+	document.getElementById("result").value = datetime;              
+    }
+</script>
+
 </body>
 </html>
